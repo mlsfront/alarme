@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Mono', monospace;
+}
+.off {
+  z-index: -10;
+  opacity: 0;
+}
+.on {
+  z-index: 10;
+  opacity: 1;
+}
+.alarmeOn{
+    z-index: 11;
+    opacity: 1;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: url('dourado.webp');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.relogioLayout {
+  text-align: center;
+  color:#232526;
+  padding: 10px;
+}
+#relogio{
+    font-size: 5rem;
+    font-family: 'Audiowide', cursive;
+}
+#data{
+    margin-bottom: 15px;
+}
+#comecar{
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 5px 30px;
+    font-size: large;
+    text-transform: uppercase;
+    color: #232526;
+    background-color: lightslategrey;
+    outline: none;
+    cursor:pointer;
+}
+#comecar:hover{
+    border: 1px solid #232526;
+    border-radius: 4px;
+    background: none;
+}
+.menuLayout{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 700px;
+    height: 450px;
+    background-color: rgb(39, 37, 37);
+    border-radius: 4px;
+    color:#c7a34b;
+}
+@media (max-width: 680px){
+    .menuLayout{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+        height: 450px;
+        background-color: rgb(39, 37, 37);
+        border-radius: 4px;
+        color:#c7a34b;
+    }
+    ::placeholder{
+        font-size: 10px !important;
+    }
+    .menuSelect{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.menuInfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.menuHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgb(58, 54, 54);
+    border-radius: 4px 4px 0 0;
+}
+#menuFechar{
+    border:none;
+    background:none;
+    font-size: large;
+    text-shadow: 0 0 10px dodgerblue ;
+    color:#c3c3c3;
+    cursor: pointer;
+    outline: none;
+}
+.menuSelect{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+    align-items: center;
+}
+.selectH{
+    display: flex;
+}
+.selectM{
+    display: flex;
+}
+#selectHoras,#selectMin{
+    padding: 5px 20px;
+    outline: none;
+    background: none;
+    color: white;
+    border: 1px solid white;
+}
+.optionH,.optionM{
+    color: black;
+}
+.menuFooter{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 20px;
+    color: #c7a34b;
+}
+#Cancelar {
+    margin-top: 10px;
+    color: red !important;
+}
+#testeAlarme {
+    color: #c7a34b !important;
+}
+#testeAlarme,#Cancelar,#Iniciar,#cancelarAlarme{
+    background: none;
+    border: 1px solid white;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    color: #c3c3c3;
+    outline: none;
+    cursor: pointer;
+}
+
+#volume{
+    margin-left: 10px;
+    font-size: 1.5rem;
+    cursor:pointer
+}
+#alarmeTocando{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 450px;
+    background-color: rgb(39, 37, 37);
+    border-radius: 4px;
+    color:#c7a34b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@media (max-width: 680px){
+    #alarmeTocando{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+        height: 450px;
+        background-color: rgb(39, 37, 37);
+        border-radius: 4px;
+        color:#c7a34b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+.relogioTocando{
+    display: flex;
+    margin: 40px 0;
+}
+.tituloAlarme{
+    display: flex;
+    padding: 0 30px;
+    margin: 50px 0;
+    font-size: 1.5rem;
+}
+::placeholder {
+    font-size: 20px;
+}
+#horaDefinida,#minutoDefinido{
+    font-size: 6rem;
+}
+#titulo{
+    width: 100%;
+    font-size: 1.5rem;
+    outline: none;
+    background-color: rgb(39, 37, 37);
+    border: 1px solid white;
+    color: white;
+    padding-left: 5px;
+}
+.definidoPara{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

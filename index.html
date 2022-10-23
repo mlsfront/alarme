@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarme</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://kit.fontawesome.com/395449a2ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="relogioLayout">
+            <div class="definidoPara">
+                <h1 id="alarmeDefinido"></h1>
+                <h1 id="alarmeDefinidoMin"></h1>
+            </div>
+            <h1 id="relogio"></h1>
+            <h1 id="data"></h1>
+            <button id="comecar" type="button">iniciar</button>
+        </div><!--relogio-->`
+
+        <div class="menuLayout off" id="menuLayout">
+            <div class="menuInfo">
+                <div class="menuHeader">
+                    <h1>Configuração</h1>
+                    <button type="button" id="menuFechar">Fechar</button>
+                </div><!--tituloCabecalho-->
+
+                <div class="menuSelect">
+                    <div class="selectH">
+                        <h2>Horas:&nbsp;</h2>
+                        <select name="selectHoras" id="selectHoras"></select>
+                    </div><!--selectHora-->
+                    <div class="selectM">
+                        <h2>Minutos:&nbsp;</h2>
+                        <select name="selectMin" id="selectMin"></select>
+                    </div><!--selectMinuti-->
+                </div><!--menuSelect-->
+
+                <div class="tituloAlarme">
+                    <h2>Titulo:&nbsp;</h2>
+                    <input maxlength="44" type="text" id="titulo" placeholder="Digite um título para seu alarme.">
+                </div><!--descricaoAlarme-->
+
+                <div class="menuFooter">
+                    <div class="teste">
+                    <button id="testeAlarme">Teste Alarme</button>
+                        <i id="volume" class="fas fa-volume-off"></i>
+                    </div><!--btnTeste-->
+
+                    <div>
+                        <button id="Cancelar">Cancelar</button>
+                        <button id="Iniciar">Iniciar</button>
+                    </div><!--btnAcoes-->
+                </div><!--menuFooter-->   
+
+            </div><!--MenuInfo-->
+
+        </div><!--menuLayout-->
+
+        <div class="off" id="alarmeTocando">
+            <h1 id="tituloDefinido"></h1>
+            <div class="relogioTocando">
+                <h1 id="horaDefinida"></h1>
+                <h1 id="minutoDefinido"></h1>
+            </div><!--relogioTocando-->
+            <button id="cancelarAlarme">Cancelar</button>
+        </div><!--alarmeTocando-->
+    </div><!--container-->
+
+    <audio loop id="alarme" src="./som/alarm.mp3"></audio>
+    <script src="./js/function.js"></script>
+</body>
+
+</html>
